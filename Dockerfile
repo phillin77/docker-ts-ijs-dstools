@@ -7,7 +7,8 @@ RUN apt-get update \
 RUN npm install -g ijavascript \
     && ijsinstall --hide-undefined --install=global
 
-RUN cd /notebooks && npm install dstools
+RUN cd /notebooks \
+    && npm install dstools
 
 # TensorBoard
 EXPOSE 6006
